@@ -17,12 +17,18 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Services
         binding.startServiceBtn.setOnClickListener(view -> {
             startService(new Intent(this,MyService.class));
         });
 
         binding.stopServiceBtn.setOnClickListener(view -> {
             stopService(new Intent(this, MyService.class));
+        });
+
+        // Intent Services
+        binding.startMyIntentService.setOnClickListener(view -> {
+            startService(new Intent(this,MyIntentService.class));
         });
 
 
