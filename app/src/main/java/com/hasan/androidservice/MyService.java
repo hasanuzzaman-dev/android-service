@@ -17,19 +17,20 @@ public class MyService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d(TAG, "onStartCommand: started");
+        Log.d(TAG, "onStartCommand: Service Started");
+        stopSelf();
         return super.onStartCommand(intent, flags, startId);
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d(TAG, "onCreate: started");
+        Log.d(TAG, "onCreate: Service Created");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy: started");
+        Log.d(TAG, "onDestroy: Service Destroyed");
     }
 }
