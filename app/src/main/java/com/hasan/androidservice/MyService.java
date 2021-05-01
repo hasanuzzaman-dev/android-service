@@ -24,10 +24,11 @@ public class MyService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(TAG, "onStartCommand: Service Started");
+        Log.d(TAG, "onStartCommand: startID: "+startId);
 
         //mediaPlayer.start();
 
-        new Thread(new Runnable() {
+      /*  new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
@@ -42,7 +43,7 @@ public class MyService extends Service {
                     e.printStackTrace();
                 }
             }
-        }).start();
+        }).start();*/
 
         //Toast.makeText(this, "Service Started", Toast.LENGTH_SHORT).show();
        // stopSelf();
